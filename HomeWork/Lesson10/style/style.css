@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+body{
+    background-image: url("../img/IMG_1125.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.first{
+    width: 50%;
+    text-align: justify;
+}
+.first h2{
+    text-transform: uppercase;
+    text-align: center;
+}
+.first p{
+    text-transform: lowercase;
+    text-indent: 20px;
+}
+.form{
+    width: 50%;
+}
