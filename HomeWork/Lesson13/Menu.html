@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu</title>
+    <link href="vendor/fontawesome/css/all.min.css" rel="stylesheet">
+</head>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 1170px;
+    margin: 0 auto;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.clear{
+    clear: both;
+}
+img{
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+.adress_main,
+.phone_main{
+    width: 27%;
+    padding-top: 25px;
+}
+.clock_work{
+    width: 22%;
+    text-align: center;
+    padding-top: 25px;
+}
+.adress_main,
+.phone_main,
+.clock_work i{
+    font-size: 19px;
+    color: navy;
+    padding-right: 3px;
+}
+.logo{
+    width: 20%;
+}
+.header{
+    margin-top: 15px;
+}
+.phone_main a{
+    color: navy;
+    text-decoration: none;
+}
+.phone_main a:hover{
+    color: darkslategrey;
+}
+.adress_main{
+    color: 333;
+}
+.nav-menu{
+    width: 100%;
+    background: cornflowerblue;
+    margin-top: 15px;
+}
+ul.menu-main>li.item-menu{
+    list-style: none;
+    float: left;
+}
+ul.menu-main>li.item-menu>a{
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    padding: 20px 15px;
+    display: block;
+}
+ul.menu-main>li.item-menu>a:hover{
+    color: darkslategrey;
+}
+</style>
+<body>
+<main class="main">
+    <div class="for_page">
+        <div class="page">
+            <header class="header">
+                <div class="container">
+                    <div class="logo fl">
+                        <a href="/"><img class="logo-site" src="img/logo.jpg" alt="Logo | https:site.com.ua" title="logo"/></a>
+                    </div>
+                    <div class="clock_work fl">
+                        <i class="fas fa-clock"></i> <span>9:00 till 18:00</span>
+                    </div>
+                    <div class="phone_main fl">
+                        <i class="fas fa-phone-square-alt"></i>
+                        <a href="tel:+380937465234">+38 (093) 746 52 34</a>
+                    </div>
+                    <div class="adress_main fl">
+                        <i class="fas fa-map-marked-alt"></i>
+                        Kyiv, Saksahanskoho st.10
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <nav class="nav-menu">
+                    <div class="container">
+                        <ul class="menu-main">
+                            <li class="item-menu"><a href="item-link active">Main</a> </li>
+                            <li class="item-menu"><a href="item-link">About us</a> </li>
+                            <li class="item-menu"><a href="item-link">Catalog</a> </li>
+                            <li class="item-menu"><a href="item-link">News</a> </li>
+                            <li class="item-menu"><a href="item-link">Contacts</a> </li>
+                        </ul>
+                        <div class="clear"></div>
+
+                    </div>
+
+                </nav>
+            </header>
+        </div>
+    </div>
+</main>
+</body>
+</html>
