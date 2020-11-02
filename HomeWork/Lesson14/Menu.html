@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu</title>
+    <link href="vendor/fontawesome/css/all.min.css" rel="stylesheet">
+    <link href="vendor/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="vendor/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-3.0.0.js"></script>
+    <script type="text/javascript" src="vendor/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="js/customs.js"></script>
+</head>
+
+<style>
+*{
+    margin: 0;
+    padding: 0;
+}
+html,
+body{
+    height: 100%;
+}
+.for_page{
+    position: relative;
+    min-height: 100%;
+}
+.page{
+    padding: 0 0 58px 0;
+}
+.container{
+    width: 1170px;
+    margin: 0 auto;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.clear{
+    clear: both;
+}
+img{
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+.adress_main,
+.phone_main{
+    width: 27%;
+    padding-top: 25px;
+}
+.clock_work{
+    width: 22%;
+    text-align: center;
+    padding-top: 25px;
+}
+.adress_main,
+.phone_main,
+.clock_work i{
+    font-size: 19px;
+    color: navy;
+    padding-right: 3px;
+}
+.logo{
+    width: 20%;
+}
+.header{
+    margin-top: 15px;
+}
+.phone_main a{
+    color: navy;
+    text-decoration: none;
+}
+.phone_main a:hover{
+    color: darkslategrey;
+}
+.adress_main{
+    color: navy;
+}
+.nav-menu{
+    width: 100%;
+    background: cornflowerblue;
+    margin-top: 15px;
+}
+ul.menu-main li.item-menu{
+    list-style: none;
+    float: left;
+}
+ul.menu-main li.item-menu a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 20px 15px;
+    display: block;
+}
+ul.menu-main li.item-menu a:hover{
+    color: darkslategrey;
+}
+ul.menu-main li.item-menu:nth-child(3){
+    position: relative;
+}
+ul.menu-main li.item-menu:nth-child(3) ul.child-menu-item{
+    position: absolute;
+    background: cornflowerblue;
+    width: 149px;
+    display: none;
+}
+ul.menu-main li.item-menu:nth-child(3):hover ul.child-menu-item{
+    display: block;
+}
+ul.menu-main li.item-menu ul.child-menu-item li{
+    float: inherit;
+}
+ul.menu-main li.item-menu ul.child-menu-item li a{
+    padding: 9px 15px;
+}
+.slide1{
+    background: url("img/slide1.jpg") no-repeat;
+    background-size: cover;
+    padding: 200px;
+}
+.slide2{
+    background: url("img/slide2.jpg") no-repeat;
+    background-size: cover;
+    padding: 200px;
+}
+.item h2{
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+.text_slide{
+    font-size: 30px;
+    font-style: italic;
+}
+#home_slider.owl-carousel .owl-nav .owl-prev{
+    background: url("img/arrow_prev.png") no-repeat;
+    width: 8px;
+    height: 13px;
+    outline: none;
+    position: absolute;
+    bottom: 300px;
+    left: 16px;
+}
+#home_slider.owl-carousel .owl-nav .owl-next{
+    background: url("img/arrow_next.png") no-repeat;
+    width: 8px;
+    height: 13px;
+    outline: none;
+    position: absolute;
+    bottom: 300px;
+    right: 16px;
+
+}
+#home_slider.owl-carousel .owl-nav .owl-prev:hover,
+#home_slider.owl-carousel .owl-nav .owl-next:hover{
+    opacity:0.6;
+}
+.box_text{
+    width: 40%;
+    float: left;
+    font-size: 16px;
+    font-style: italic;
+    line-height: 24px;
+    margin-top: 100px;
+}
+.img_block2{
+    width: 60%;
+    float: left;
+    box-sizing: border-box;
+}
+.block2{
+    padding: 60px 0;
+}
+.img_block2 img{
+    display: block;
+    margin: 0 auto;
+}
+.footer{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background: cornflowerblue;
+    padding: 20px 0;
+    color: white;
+}
+
+</style>
+<body>
+    <div class="for_page">
+        <div class="page">
+            <header class="header">
+                <div class="container">
+                    <div class="logo fl">
+                        <a href="/"><img class="logo-site" src="img/logo.jpg" alt="Logo | https:site.com.ua" title="logo"/></a>
+                    </div>
+                    <div class="clock_work fl">
+                        <i class="fas fa-clock"></i> <span>9:00 till 18:00</span>
+                    </div>
+                    <div class="phone_main fl">
+                        <i class="fas fa-phone-square-alt"></i>
+                        <a href="tel:+380937465234">+38 (093) 746 52 34</a>
+                    </div>
+                    <div class="adress_main fl">
+                        <i class="fas fa-map-marked-alt"></i>
+                        Kyiv, Saksahanskoho st.10
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <nav class="nav-menu">
+                    <div class="container">
+                        <ul class="menu-main">
+                            <li class="item-menu"><a href="item-link active">Main</a> </li>
+                            <li class="item-menu"><a href="item-link">About us</a> </li>
+                            <li class="item-menu"><a href="item-link">Catalog</a>
+                                <ul class="child-menu-item">
+                                    <li class="item-menu"><a href="item-link">Running Shoes</a></li>
+                                    <li class="item-menu"><a href="item-link">Sandals</a></li>
+                                    <li class="item-menu"><a href="item-link">Sneakers</a></li>
+                                    <li class="item-menu"><a href="item-link">Balerinas</a></li>
+                                    <li class="item-menu"><a href="item-link">Boots</a></li>
+                            </ul>
+                            </li>
+                            <li class="item-menu"><a href="item-link">News</a> </li>
+                            <li class="item-menu"><a href="item-link">Contacts</a> </li>
+                        </ul>
+                        <div class="clear"></div>
+
+                    </div>
+
+                </nav>
+            </header>
+            <section class="slider">
+                <div class="owl-carousel" id="home_slider">
+                    <div class="item slide1">
+                        <div class="container">
+                            <h2>Low Price</h2>
+                            <div class="text_slide">Buy now, don't waste time thinking. THIS is your last chance!</div>
+                        </div>
+                    </div>
+                    <div class="item slide2">
+                        <div class="container">
+                            <h2>50% off EVERYTHING</h2>
+                            <div class="text_slide">50% off each style. Till Oct.30 only!!!</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="block2">
+                <div class="container">
+                    <div class="box_text">
+                        It can take up to 25 days for an item to reach us once you return it. Once the item is received at our fulfillment center, it takes 2 business days for the refund to be processed and 3-5 business days for the refund amount to show up in your account.
+                    </div>
+                    <div class="img_block2">
+                        <img src="img/shoes.webp" alt="Running_Shoes" title="shoes"/>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </section>
+        </div>
+        <footer class="footer">
+            copyright 2020
+
+        </footer>
+    </div>
+</body>
+</html>
