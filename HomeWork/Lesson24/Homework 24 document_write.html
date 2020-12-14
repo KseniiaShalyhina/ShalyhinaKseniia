@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HW 24 document_write</title>
+</head>
+<style>
+    .details{
+        text-transform: uppercase;
+        color: #6a2734;
+        width: 300px;
+        text-align: center;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+
+    input{
+        padding: 10px;
+        border: none;
+        border-bottom: 2px solid red;
+        outline: none;
+        width: 300px;
+        box-sizing: border-box;
+        background: #ffdada;
+        border-radius: 5px;
+    }
+    ::placeholder{
+        color: #6a2734;
+        text-align: center;
+        font-size: 14px;
+    }
+    .submit{
+        color: #6a061a;
+        font-size: 14px;
+    }
+    .submit:hover{
+        cursor: pointer;
+        background: #ffaca5;
+        color: #b60d0e;
+    }
+
+</style>
+<body>
+<form action="/action_page.php">
+    <p class="details">Your Details First</p>
+    <p><input class="modified" type="text" name="name" placeholder="What's your name?"></p>
+    <p><input type="tel" name="Phone Number" placeholder="How can we reach you?"></p>
+    <p><input class="submit" type="submit" name="submit" ></p>
+</form>
+<script>
+    document.querySelector('.modified').placeholder = "Kseniia";
+</script>
+
+</body>
+</html>
