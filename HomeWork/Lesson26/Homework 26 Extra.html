@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homework 26 Extra</title>
+</head>
+<script>
+    function sumSalaries(salaries) {
+
+        let sum = 0;
+        for (let salary of Object.values(salaries)) {
+            sum += salary;
+        }
+
+        return sum; 
+    }
+
+    let salaries = {
+        "Alex": 100,
+        "Alena": 160,
+        "Peter": 130
+    };
+
+    alert( sumSalaries(salaries) );
+</script>
+<body>
+
+</body>
+</html>
