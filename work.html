@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    $defaultTranslationRate = 222;$minimumMinutes = 30;
+    $daytime = 600;
+    $weekendInMinutes = 2880;
+    ///////////////////////////////////////////////////////////////////////
+    $compensation = 1;
+    // если существует экспертиза, то увеличиваем коэфициент
+    if ((bool) $projectParams->getExpertise()) {
+        $compensation *= 1.2;
+    }
+    // round - округляем
+    $compensation = round($compensation,1);
+    ///////////////////////////////////////////////////////////////////////
+    // получаем количество слов
+    $wordCount = $projectParams->getWordCount();
+    $wordCount *= $compensation;
+    ///////////////////////////////////////////////////////////////////////
+    $minutes = $wordCount / $defaultTranslationRate * 60;
+    $minutes *= 1.05;
+    ///////////////////////////////////////////////////////////////////////
+    // добавляем паузы
+    if ($minutes > 150) {
+        $minutes += ((int)($minutes / 150)) * 20;  //coffee break
+    }
+    ///////////////////////////////////////////////////////////////////////
+    // convert minutes into days due to work hours
+    if ($minutes > $daytime) {
+        $numberOfDays           = (int)($minutes / $daytime); // получаем количетво дней из расчета, что переводчик работает 10 часов = 600 минут
+        $numberOfDaysInMinutes  = $numberOfDays * 1440;
+        $dayTailInMinutes       = $minutes % $daytime;  // остаток от деления
+        $minutes                = $numberOfDaysInMinutes + $dayTailInMinutes;
+        ///////////////////////////////////////////////////////////////////
+        // convert minutes into days with weekend
+        if ($numberOfDays >= 5) { // add weekends
+            $numberOfWeeks = (int)($numberOfDays / 5);
+            $minutes += $weekendInMinutes * $numberOfWeeks;
+        }
+    }
+    ///////////////////////////////////////////////////////////////////////
+    // если количество минут меньше 30, возвращаем 30
+    $minutes = ($minutes < $minimumMinutes) ? $minimumMinutes : $minutes;
+    ///////////////////////////////////////////////////////////////////////
+    // if 'needProofreading' == true, double minutes, because rate of proofreading is same
+    if( $projectParams->getNeedProofreading() )
+    {
+        $minutes += $minutes;
+    }
+</script>
+</html>
